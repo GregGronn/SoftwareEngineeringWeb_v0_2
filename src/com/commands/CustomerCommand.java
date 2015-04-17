@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.beans.CustomerBean;
 import com.business.Customer;
 import com.command.parameters.CommandParameter;
+import com.dataaccess.insert.InsertCurrentCustomer;
 import com.dataaccess.insert.InsertCustomer;
 import com.dataaccess.select.SelectCustomer;
 
@@ -21,7 +22,7 @@ public class CustomerCommand {
 	private String state;
 	private String zip;
 	private String phone;
-	private String sMemberStatus;
+	private boolean MemberStatus;
 	private String mode;
 	
 	String forwardingPage = null;
@@ -40,7 +41,7 @@ public class CustomerCommand {
 			select.setState(state);
 			select.setZip(zip);
 			select.setPhone(phone);
-			select.setsMemberStatus(sMemberStatus);
+			select.setMemberStatus(MemberStatus);
 			
 			if(!select.execute()){
 				System.out.println(select.getErrorMessage());
@@ -62,8 +63,8 @@ public class CustomerCommand {
 		}else{
 			insert = new InsertCustomer();
 			insert.setCno(cno);
-			insert.setcName(cName);
-			insert.setMemberStatus(sMemberStatus);
+			insert.setCname(cName);
+			insert.setMember_status(MemberStatus);
 			
 			if(!insert.execute()){
 				System.out.println(insert.getErrorMessage());
@@ -111,7 +112,7 @@ public class CustomerCommand {
 					phone = params.get(ii).getValue();
 				}
 				if("memberStatus".equals(params.get(ii).getName())){
-					sMemberStatus = params.get(ii).getValue();
+					MemberStatus = params.get(ii).getValue();
 				}
 				if("mode".equals(params.get(ii).getName())){
 					mode = params.get(ii).getValue();
