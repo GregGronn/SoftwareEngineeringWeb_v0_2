@@ -17,12 +17,8 @@ public class CustomerCommand {
 	InsertCustomer insert = null;
 	private int cno = -1;
 	private String cName;
-	private String address;
-	private String city;
-	private String state;
-	private String zip;
 	private String phone;
-	private boolean MemberStatus;
+	private String memberStatus;
 	private String mode;
 	
 	String forwardingPage = null;
@@ -36,12 +32,8 @@ public class CustomerCommand {
 			select = new SelectCustomer();
 			select.setCno(cno);
 			select.setcName(cName);
-			select.setAddress(address);
-			select.setCity(city);
-			select.setState(state);
-			select.setZip(zip);
 			select.setPhone(phone);
-			select.setMemberStatus(MemberStatus);
+			select.setMemberStatus(memberStatus);
 			
 			if(!select.execute()){
 				System.out.println(select.getErrorMessage());
@@ -64,7 +56,7 @@ public class CustomerCommand {
 			insert = new InsertCustomer();
 			insert.setCno(cno);
 			insert.setCname(cName);
-			insert.setMember_status(MemberStatus);
+			insert.setMemberStatus(memberStatus);
 			
 			if(!insert.execute()){
 				System.out.println(insert.getErrorMessage());
@@ -93,26 +85,11 @@ public class CustomerCommand {
 				if("cName".equals(params.get(ii).getName())){
 					cName = params.get(ii).getValue();
 				}
-				if("address".equals(params.get(ii).getName())){
-					address = params.get(ii).getValue();
-				}
-				if("city".equals(params.get(ii).getName())){
-					city = params.get(ii).getValue();
-				}
-				if("city".equals(params.get(ii).getName())){
-					city = params.get(ii).getValue();
-				}
-				if("state".equals(params.get(ii).getName())){
-					state = params.get(ii).getValue();
-				}
-				if("zip".equals(params.get(ii).getName())){
-					zip = params.get(ii).getValue();
-				}
 				if("phone".equals(params.get(ii).getName())){
 					phone = params.get(ii).getValue();
 				}
 				if("memberStatus".equals(params.get(ii).getName())){
-					MemberStatus = params.get(ii).getValue();
+					memberStatus = params.get(ii).getValue();
 				}
 				if("mode".equals(params.get(ii).getName())){
 					mode = params.get(ii).getValue();

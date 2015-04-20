@@ -1,83 +1,120 @@
 package com.business;
 
+/**
+ * creates the game object
+ *
+ */
 public class Game {
 
 	public Game(){}
 
 	
-	private int pno;
-	private String pname;
+	private String pno;
+	private String name;
 	private String platform;
-	private String purchase_date;
-	private int total_time_played;
-	private boolean broken;
+	private String broken;
+	private String totalTimePlayed;
 
-	public int getPno() {
-		return pno;
-	}
-
-	public void setPno(int Pno) {
-		this.pno = Pno;
-	}
-
-	public String getPname() {
-		return pname;
-	}
-
-	public void setPname(String PName) {
-		this.pname = PName;
-	}
-
-	public String getPlatform() {
-		return platform;
-	}
-
-	public void setPlatform(String Platform) {
-		this.platform = Platform;
-	}
-
-	public String getPurchase_date() {
-		return purchase_date;
-	}
-
-	public void setPurchase_date(String Purchase_date) {
-		this.purchase_date = Purchase_date;
-	}
-
-	public int getTotal_time_played() {
-		return total_time_played;
-	}
-
-	public void setTotal_time_played(int Total_time_played) {
-		this.total_time_played = Total_time_played;
-	}
-
-	public boolean getBroken() {
-		return broken;
-	}
-
-	public void setBroken(boolean Broken) {
-		this.broken = Broken;
-	}
 	
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 * A string builder for developers use
+	 */
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Product [productNo=");
 		builder.append(pno);
 		builder.append(", Product Name=");
-		builder.append(pname);
+		builder.append(name);
 		builder.append(", platform=");
 		builder.append(platform);
-		builder.append(", purchase date=");
-		builder.append(purchase_date);
 		builder.append(", total time played=");
-		builder.append(total_time_played);
+		builder.append(totalTimePlayed);
 		builder.append(", broken status=");
 		builder.append(broken);
 		builder.append("]");
 		return builder.toString();
+	}
+
+
+	/**
+	 * @return the pno
+	 */
+	public String getPno() {
+		return pno;
+	}
+
+
+	/**
+	 * @param pno the pno to set
+	 */
+	public void setPno(String pno) {
+		this.pno = pno;
+	}
+
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	/**
+	 * @return the platform
+	 */
+	public String getPlatform() {
+		return platform;
+	}
+
+
+	/**
+	 * @param platform the platform to set
+	 */
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
+
+
+	/**
+	 * @return the broken
+	 */
+	public String getBroken() {
+		return broken;
+	}
+
+
+	/**
+	 * @param broken the broken to set
+	 */
+	public void setBroken(String broken) {
+		this.broken = broken;
+	}
+
+
+	/**
+	 * @return the totalTimePlayed
+	 */
+	public String getTotalTimePlayed() {
+		return totalTimePlayed;
+	}
+
+
+	/**
+	 * @param totalTimePlayed the totalTimePlayed to set
+	 */
+	public void setTotalTimePlayed(String totalTimePlayed) {
+		this.totalTimePlayed = totalTimePlayed;
 	}
 	
 	

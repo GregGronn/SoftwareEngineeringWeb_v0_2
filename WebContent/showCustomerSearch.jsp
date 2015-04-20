@@ -22,20 +22,11 @@
 
 				<tr>
 					<td>Customer Number:</td>
-					<td><%=c.getCompanyNo() %></td>
+					<td><%=c.getCno() %></td>
 					<td>Customer Name:</td>
-					<td><%=c.getCName() %></td>
+					<td><%=c.getCname() %></td>
 				</tr>
-				<tr>
-					<td>Street:</td>
-					<td><%=c.getStreet() %></td>
-					<td>City:</td>
-					<td><%=c.getCity() %></td>
-				</tr>
-				<tr>
-					<td>Zip Code:</td>
-					<td><%=c.getZip() %></td>
-					<td>Phone:</td>
+						<td>Phone:</td>
 					<td><%=c.getPhone() %></td>
 				</tr>
 				<tr>
